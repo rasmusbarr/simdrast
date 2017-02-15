@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{54997383-6A64-4DB0-8FA7-E7572CB94138}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DirectXA4</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <BasicRuntimeChecks>StackFrameRuntimeCheck</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxguid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxguid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\SimdRast\Atomics.h" />
+    <ClInclude Include="..\..\SimdRast\BinList.h" />
+    <ClInclude Include="..\..\SimdRast\BinListArray.h" />
+    <ClInclude Include="..\..\SimdRast\Binning.h" />
+    <ClInclude Include="..\..\SimdRast\CompositeBinList.h" />
+    <ClInclude Include="..\..\SimdRast\CompositeBinListArray.h" />
+    <ClInclude Include="..\..\SimdRast\Config.h" />
+    <ClInclude Include="..\..\SimdRast\DrawCall.h" />
+    <ClInclude Include="..\..\SimdRast\FragmentRenderState.h" />
+    <ClInclude Include="..\..\SimdRast\ImportanceMap.h" />
+    <ClInclude Include="..\..\SimdRast\IndexProvider.h" />
+    <ClInclude Include="..\..\SimdRast\PoolAllocator.h" />
+    <ClInclude Include="..\..\SimdRast\QuickSort.h" />
+    <ClInclude Include="..\..\SimdRast\Renderer.h" />
+    <ClInclude Include="..\..\SimdRast\RenderState.h" />
+    <ClInclude Include="..\..\SimdRast\Resolve.h" />
+    <ClInclude Include="..\..\SimdRast\Shader.h" />
+    <ClInclude Include="..\..\SimdRast\SimdDouble.h" />
+    <ClInclude Include="..\..\SimdRast\SimdMath.h" />
+    <ClInclude Include="..\..\SimdRast\SimdTrans.h" />
+    <ClInclude Include="..\..\SimdRast\TextureSampler.h" />
+    <ClInclude Include="..\..\SimdRast\Thread.h" />
+    <ClInclude Include="..\..\SimdRast\ThreadLocalAllocator.h" />
+    <ClInclude Include="..\..\SimdRast\ThreadLocalAllocatorArray.h" />
+    <ClInclude Include="..\..\SimdRast\ThreadPool.h" />
+    <ClInclude Include="..\..\SimdRast\TriangleSetup.h" />
+    <ClInclude Include="..\..\SimdRast\VectorMath.h" />
+    <ClInclude Include="..\..\SimdRast\VertexRenderState.h" />
+    <ClInclude Include="..\..\SimdRast\ZMode.h" />
+    <ClInclude Include="..\Framework\External\IGFXExtensions\ID3D10Extensions.h" />
+    <ClInclude Include="..\Framework\External\IGFXExtensions\IGFXExtensionsHelper.h" />
+    <ClInclude Include="..\Framework\External\lodepng\lodepng.h" />
+    <ClInclude Include="..\Framework\LinearTexture.h" />
+    <ClInclude Include="..\Framework\Mesh.h" />
+    <ClInclude Include="..\Framework\SilhouetteRast.h" />
+    <ClInclude Include="ChessScene.h" />
+    <ClInclude Include="CpuRendererThread.h" />
+    <ClInclude Include="Delegate.h" />
+    <ClInclude Include="DraRenderTarget.h" />
+    <ClInclude Include="DraShadowMap.h" />
+    <ClInclude Include="DraSurface.h" />
+    <ClInclude Include="DraTexture.h" />
+    <ClInclude Include="ConstantBuffer.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="RenderMesh.h" />
+    <ClInclude Include="ReleasePointer.h" />
+    <ClInclude Include="Quad.h" />
+    <ClInclude Include="RenderTarget.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneRenderer.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="SponzaScene.h" />
+    <ClInclude Include="WideString.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="DxContext.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="MsaaRenderTarget.h" />
+    <ClInclude Include="SceneWindow.h" />
+    <ClInclude Include="SceneShader.h" />
+    <ClInclude Include="TransferTask.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\SimdRast\BinListArray.cpp" />
+    <ClCompile Include="..\..\SimdRast\Binning.cpp" />
+    <ClCompile Include="..\..\SimdRast\CompositeBinListArray.cpp" />
+    <ClCompile Include="..\..\SimdRast\ImportanceMap.cpp" />
+    <ClCompile Include="..\..\SimdRast\PoolAllocator.cpp" />
+    <ClCompile Include="..\..\SimdRast\Renderer.cpp" />
+    <ClCompile Include="..\..\SimdRast\Resolve.cpp" />
+    <ClCompile Include="..\..\SimdRast\SimdMath.cpp" />
+    <ClCompile Include="..\..\SimdRast\TriangleSetup.cpp" />
+    <ClCompile Include="..\Framework\External\IGFXExtensions\IGFXExtensionsHelper.cpp" />
+    <ClCompile Include="..\Framework\External\lodepng\lodepng.cpp" />
+    <ClCompile Include="..\Framework\LinearTexture.cpp" />
+    <ClCompile Include="..\Framework\Mesh.cpp" />
+    <ClCompile Include="..\Framework\SilhouetteRast.cpp" />
+    <ClCompile Include="ChessScene.cpp" />
+    <ClCompile Include="CpuRendererThread.cpp" />
+    <ClCompile Include="DraRenderTarget.cpp" />
+    <ClCompile Include="DraShadowMap.cpp" />
+    <ClCompile Include="DraTexture.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="MsaaRenderTarget.cpp" />
+    <ClCompile Include="Quad.cpp" />
+    <ClCompile Include="RenderMesh.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneRenderer.cpp" />
+    <ClCompile Include="SceneWindow.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="SponzaScene.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="DxContext.cpp" />
+    <ClCompile Include="WideString.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TransferTask.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Data\QuadColor.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Data\QuadTexture.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Data\Scene.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\Data\ShadowMap.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

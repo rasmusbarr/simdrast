@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{73797395-633e-40c9-a83c-93720da94d48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SimdRast">
+      <UniqueIdentifier>{e3f98b8d-24cc-44e5-a198-1d91bd00b8e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectXA4">
+      <UniqueIdentifier>{15e99fa0-88ee-4989-8c7f-ae8fc01c9340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{44b4c151-de80-4884-a498-d12b87456b01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Framework\External\IGFXExtensions\ID3D10Extensions.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Framework\External\IGFXExtensions\IGFXExtensionsHelper.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Framework\External\lodepng\lodepng.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Framework\LinearTexture.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Framework\Mesh.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Framework\SilhouetteRast.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\Atomics.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\BinList.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\BinListArray.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\Binning.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\CompositeBinList.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\CompositeBinListArray.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\Config.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\DrawCall.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\FragmentRenderState.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\ImportanceMap.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\IndexProvider.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\PoolAllocator.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\QuickSort.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\Renderer.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\RenderState.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\Resolve.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\Shader.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\SimdDouble.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\SimdMath.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\SimdTrans.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\TextureSampler.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\Thread.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\ThreadLocalAllocator.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\ThreadLocalAllocatorArray.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\ThreadPool.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\TriangleSetup.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\VectorMath.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\VertexRenderState.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SimdRast\ZMode.h">
+      <Filter>SimdRast</Filter>
+    </ClInclude>
+    <ClInclude Include="CpuRendererThread.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="Delegate.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="DraRenderTarget.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="DraShadowMap.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="DraSurface.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="DraTexture.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantBuffer.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="ReleasePointer.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="Quad.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderTarget.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="WideString.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="DxContext.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="MsaaRenderTarget.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneShader.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="TransferTask.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneWindow.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderMesh.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneRenderer.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="SponzaScene.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="ChessScene.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>DirectXA4</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Framework\External\IGFXExtensions\IGFXExtensionsHelper.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Framework\External\lodepng\lodepng.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Framework\LinearTexture.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Framework\Mesh.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Framework\SilhouetteRast.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SimdRast\BinListArray.cpp">
+      <Filter>SimdRast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SimdRast\Binning.cpp">
+      <Filter>SimdRast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SimdRast\CompositeBinListArray.cpp">
+      <Filter>SimdRast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SimdRast\ImportanceMap.cpp">
+      <Filter>SimdRast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SimdRast\PoolAllocator.cpp">
+      <Filter>SimdRast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SimdRast\Renderer.cpp">
+      <Filter>SimdRast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SimdRast\Resolve.cpp">
+      <Filter>SimdRast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SimdRast\SimdMath.cpp">
+      <Filter>SimdRast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SimdRast\TriangleSetup.cpp">
+      <Filter>SimdRast</Filter>
+    </ClCompile>
+    <ClCompile Include="DraRenderTarget.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="DxContext.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="DraTexture.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="TransferTask.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="DraShadowMap.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderMesh.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="MsaaRenderTarget.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="Quad.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="CpuRendererThread.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="WideString.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneWindow.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneRenderer.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="SponzaScene.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="ChessScene.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>DirectXA4</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Data\QuadColor.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\QuadTexture.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\ShadowMap.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\Scene.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

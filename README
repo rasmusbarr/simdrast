@@ -1,0 +1,57 @@
+README
+------
+
+SimdRast: A SIMD-efficient CPU rasterization pipeline optimized for rendering a sparse set of pixels in high quality (16 samples per pixel). It can be seen as a starting point for hybrid GPU/CPU rendering.
+
+The project contains an implementation of the A4 anti-aliasing algorithm (Barringer and Akenine-Möller 2013). The paper can be found here:
+
+fileadmin.cs.lth.se/graphics/research/papers/2013/a4
+
+The code (including sample programs) is copyright Rasmus Barringer. Some third-party source code have their own license. See the LICENSE file for details.
+
+
+Current restrictions
+--------------------
+
+Vertex and attribute buffers must be 16-byte aligned. The stride must also be a multiple of 16-bytes. The same holds for attribute shader output.
+
+The first 16-bytes worth of attributes are currently always differentiated w.r.t. screen space x and y. This should ideally be programmable in shaders.
+
+
+Files/Folders
+-------------
+
+SimdRast is entirely contained in the "SimdRast" folder. The "Samples" folder contains two sample programs that make use of SimdRast:
+
+- DirectXA4: A DirectX11 implementation of the A4 anti-aliasing algorithm.
+
+	Requirements: Windows 7, Visual Studio 2012, CPU supporting AVX and Intel Instant Access
+
+- SwRenderer: A simple program that renders a scene in software using SimdRast and displays it using GLUT/GL.
+
+	Requirements: Mac OSX 10.8, Xcode 4.6, CPU supporting SSE 4.1 at minimum.
+	(enable AVX for improved performance if your CPU supports it)
+
+	Note: You need to set the working directory appropriately for the program to work. There are two options:
+		1. Enable legacy build location in Xcode (prefs->locations->advanced->legacy).
+		2. Set the working directory to the Data folder in Scheme settings.
+
+
+FAQ
+---
+
+- How do I use SimdRast?
+
+Simply include all source files from the SimdRast folder in your project. There are no external dependencies. For specifics on how to use the code, refer to the sample programs.
+
+- Can I use the code for my commercial project?
+
+Yes. See LICENSE for details.
+
+- Why do you use FORCEINLINE? Doesn't the compiler know best?
+
+The places where FORCEINLINE was added has been verified to improve performance when compiling using Visual Studio 2012. In fact, most methods that are called during shader execution have been shown to benefit greatly from inlining, even when it is forced. A shader is often small enough to fit in the instruction cache, even if everything is inlined. The compiler is not optimized for generating shader code and does not understand that inlining almost always is beneficial under these circumstances.
+
+- "The code is not portable" / "The code violates strict aliasing"
+
+The code assumes quite a few things. For example, 8-bit char, 16-bit short, 32-bit int, 64-bit long long and that union members may alias. It also assumes the availability of Intel SSE/AVX intrinsics. The code is written for x86 and nothing else. It is somewhat portable between operating systems. Currently it works for Windows/VS2012 and OSX/XCode. Some pointer aliasing is present in combination with SSE/AVX intrinsics. It is believed that the compiler will respect the intrinsics so that this is not a problem.
